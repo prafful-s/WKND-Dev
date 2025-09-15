@@ -30,8 +30,9 @@
   --text-light: var(--brand-light-text-color, #ffffff);
   --text-disabled:rgb(113, 113, 113);
   --link-color: var(--brand-link-color, #131313);
---link-hover-color: var(--brand-link-hover-color, #64748B);
---main-accent-color: var(--brand-theme-color, #475569);
+  --link-hover-color: var(--brand-link-hover-color, #F97316);
+  --main-accent-color: var(--brand-theme-color, #FB923C);
+
 
   --dark-color-opacity: rgba(0, 0, 0, 0.55);
   --light-color-opacity: rgba(255, 255, 255, 0.5);
@@ -319,8 +320,8 @@ body.gray-theme {
 
 
 body.red-theme {
-  --main-accent-color: #E11D48;   /* Vibrant Rose Red */
-  --link-hover-color: #F43F5E;    /* Lighter Coral Red */
+  --main-accent-color: #DC2626;
+  --link-hover-color: #EF4444;
 }
 
 body.blue-theme {

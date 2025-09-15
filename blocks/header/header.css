@@ -196,7 +196,7 @@ header nav .nav-sections ul > li > a {
   font-family: var(--body-font-family);
 }
 header nav .nav-sections ul > li > a:hover {
-  color: var(--main-accent-color);
+  color: #ffffff;
 }
 
 header nav .nav-sections ul > li > a::before {

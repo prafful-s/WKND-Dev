@@ -136,6 +136,18 @@ html[lang="ru"] .teaser-wrapper .button-container > a {
     color: var(--text-light);
 }
 
+/* Button hover styles for teaser with dark background */
+.teaser-wrapper .teaser-swoosh-wrapper .cta-button a.button:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-light) !important;
+    border-color: var(--text-light) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.teaser-wrapper .teaser-swoosh-wrapper .cta-button a.button:hover::after {
+    color: var(--text-light) !important;
+}
+
 
 .teaser-wrapper .swoosh-layers {
     position: relative;
