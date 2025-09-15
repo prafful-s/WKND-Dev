@@ -23,13 +23,16 @@
  
 .carousel-container .button-container button {
   background-color: var(--background-color);
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
-  right: 10%;
+  border: 1px solid var(--light-color);
+  padding: 12px 16px;
+  border-radius: 50%;
   cursor: pointer;
   position: absolute;
-  top: 4%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
 .carousel-container .button-container button:disabled {
@@ -41,13 +44,16 @@
 
 html[dir="rtl"] .carousel-container .button-container button {
   background-color: var(--background-color);
-  border: none;
-  padding: 6px 11px;
-  right: auto;
-  left: 3%;
+  border: 1px solid var(--light-color);
+  padding: 12px 16px;
+  border-radius: 50%;
   cursor: pointer;
   position: absolute;
-  top: 40%;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  z-index: 10;
 }
 
 .carousel-container > .default-content-wrapper > p:first-child {
@@ -124,18 +130,30 @@ html[dir="rtl"] .section > div.carousel-wrapper {
   
 .carousel .button-container .next {
   margin: 0;
-  right: 5%;
+  right: 20px;
 }
 
 .carousel .button-container .prev {
   margin: 0;
-  right: 10%;
+  left: 20px;
+}
+
+html[dir="rtl"] .carousel .button-container .next {
+  left: 20px;
+  right: auto;
+}
+
+html[dir="rtl"] .carousel .button-container .prev {
+  right: 20px;
+  left: auto;
 }
 
 .carousel .button-container .prev:hover,
 .carousel .button-container .next:hover {
-  opacity: 0.7;
-  transition: 0.2s;
+  background-color: var(--main-accent-color);
+  border-color: var(--main-accent-color);
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
   
 .carousel .cards-card-body {
@@ -213,9 +231,8 @@ html[dir="rtl"] .section > div.carousel-wrapper {
   }
 
   .carousel-container .button-container button {
-    padding: 8px 12px;
-    right: 3%;
-    display: none;
+    padding: 10px 14px;
+    display: block;
   }
 
   .carousel-container .button-container button:disabled {
@@ -223,8 +240,7 @@ html[dir="rtl"] .section > div.carousel-wrapper {
   }
   
   html[dir="rtl"] .carousel-container .button-container button {
-    padding: 8px 12px;
-    left: 3%;
+    padding: 10px 14px;
   }
 
   .carousel > ul {
@@ -269,21 +285,22 @@ html[dir="rtl"] .section > div.carousel-wrapper {
 }
   
 @media only screen and (width < 768px) {
-  .carousel > .prev,
-  .carousel > .next {
-    right: var(--nav-padding);
-    top: 20%; 
-    cursor: pointer;
-    position: absolute;
-    color: white;
-    font-weight: bold;
-    border-radius: 3px 0 0 3px;
+  .carousel .button-container .next {
+    right: 15px;
   }
 
-  html[dir="rtl"] .carousel > .prev,
-  .carousel > .next {
-    left: var(--nav-padding);
-    top: 20%; 
+  .carousel .button-container .prev {
+    left: 15px;
+  }
+
+  html[dir="rtl"] .carousel .button-container .next {
+    left: 15px;
+    right: auto;
+  }
+
+  html[dir="rtl"] .carousel .button-container .prev {
+    right: 15px;
+    left: auto;
   }
   
   .section.carousel-container {
