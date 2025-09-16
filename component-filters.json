@@ -27,7 +27,15 @@
       "search",
       "separator",
       "form",
+      "forex",
+      "accordion",
       "embed-adaptive-form"
+    ]
+  },
+  {
+    "id": "accordion",
+    "components": [
+      "accordion-item"
     ]
   },
   {
