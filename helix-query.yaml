@@ -60,7 +60,7 @@ indices:
       - '/es'
       - '/es/**'
     target: /es/query-index.json
-      exclude:
+    exclude:
       - /es/search
       - /es/nav
       - /es/footer
