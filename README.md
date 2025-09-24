@@ -1,6 +1,6 @@
-# WKND Universal Demo (For AEM Edge Delivery Service)
+# AEM Reference Demo (for Edge Delivery Service experience)
 
-**A modern looking WKND experience:**
+**A customizable UI experience:**
 - Custom Themes (with and without code)
 - Dynamic Media Templates
 - Dynamic Media Open API & native Dynamic Media Blocks
@@ -24,7 +24,7 @@
 - Live: https://main--wknd--aemxsc.aem.live/
 
 ## Documentation
-Adobe Internal: [Quick HowTo](https://adobe-my.sharepoint.com/:w:/p/kmrobin/ESzDGcEecKJAsaLws8Vh6FkBS8JVApQG6YrmyESlufHP3A?e=nL2bYY) 
+[Ref Demo 2.0](https://adobe.com/go/refdemo) 
 
 ## Prerequisites
 Install the latest content package from link shared in Quick HowTo document above. 
