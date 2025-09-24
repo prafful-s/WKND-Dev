@@ -810,6 +810,10 @@ main .section.bg-image > .default-content-wrapper {
   display: block;
 } */
 
+.adobe-ue-edit header, .adobe-ue-preview header {
+  background: #000;
+}
+
 /* Responsive styles- start */
 @media (max-width: 1024px) {
   :root {
