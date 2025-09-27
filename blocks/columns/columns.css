@@ -42,6 +42,28 @@
   width: 100%;
 }
 
+.columns .columns-dynamic-template-col {
+  order: 0;
+}
+
+.columns .columns-dynamic-template-col img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  max-height: 500px;
+}
+
+.columns .columns-dynamic-media-image-col {
+  order: 0;
+}
+
+.columns .columns-dynamic-media-image-col img {
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  max-height: 500px;
+}
+
 
 @media (width >= 900px) {
   .columns > div {
