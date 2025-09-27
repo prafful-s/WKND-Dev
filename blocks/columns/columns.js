@@ -392,45 +392,6 @@ export default async function decorate(block) {
       }
      // const videoBlock = col.querySelector('div[data-aue-model="video"]');
 
-      // Check for dynamic template blocks
-      const dynamicTemplateBlock = col.querySelector('div[data-aue-model="dm-template"], .dynamicmedia-template');
-      if (dynamicTemplateBlock) {
-        console.log('Dynamic template block detected in column:', {
-          element: dynamicTemplateBlock,
-          column: col,
-          templateType: dynamicTemplateBlock.getAttribute('data-aue-model') || 'dynamicmedia-template',
-          templateLabel: dynamicTemplateBlock.getAttribute('data-aue-label') || 'Unknown'
-        });
-        
-        // Add specific class for dynamic template columns
-        const templateWrapper = col.closest('div');
-        if (templateWrapper) {
-          templateWrapper.classList.add('columns-dynamic-template-col');
-        }
-        
-        // Execute dynamic template logic
-        await executeDynamicTemplateLogic(dynamicTemplateBlock);
-      }
-
-      const dynamicMediaImageBlock = col.querySelector('div[data-aue-model="dm-asset"], .dynamicmedia-image');
-      if (dynamicMediaImageBlock) {
-        console.log('Dynamic media image block detected in column:', {
-          element: dynamicMediaImageBlock,
-          column: col,
-          templateType: dynamicMediaImageBlock.getAttribute('data-aue-model') || 'dynamicmedia-image',
-          templateLabel: dynamicMediaImageBlock.getAttribute('data-aue-label') || 'Unknown'
-        });
-        
-        // Add specific class for dynamic media image columns
-        const templateWrapper = col.closest('div');
-        if (templateWrapper) {
-          templateWrapper.classList.add('columns-dynamic-media-image-col');
-        }
-        
-        // Execute dynamic image logic
-        await executeDynamicImageLogic(dynamicMediaImageBlock);
-      }
-
       const linkavl = col.querySelector('a')?.href;
       const videoBlock = linkavl ? isVideoLink(linkavl) : false;
       
@@ -464,6 +425,28 @@ export default async function decorate(block) {
             }
           }
         }
+      }
+      // Check for dynamic template blocks
+      const dynamicTemplateBlock = col.querySelector('div[data-aue-model="dm-template"], .dynamicmedia-template');
+      if (dynamicTemplateBlock) {
+        // Add specific class for dynamic template columns
+        const templateWrapper = col.closest('div');
+        if (templateWrapper) {
+          templateWrapper.classList.add('columns-dynamic-template-col');
+        }
+        // Execute dynamic template logic
+        await executeDynamicTemplateLogic(dynamicTemplateBlock);
+      }
+
+      const dynamicMediaImageBlock = col.querySelector('div[data-aue-model="dm-asset"], .dynamicmedia-image');
+      if (dynamicMediaImageBlock) {
+        // Add specific class for dynamic media image columns
+        const templateWrapper = col.closest('div');
+        if (templateWrapper) {
+          templateWrapper.classList.add('columns-dynamic-media-image-col');
+        }
+        // Execute dynamic image logic
+        await executeDynamicImageLogic(dynamicMediaImageBlock);
       }
     }
   }
